@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ThemeableBrowser, ThemeableBrowserOptions, ThemeableBrowserObject } from '@ionic-native/themeable-browser'; 
 
 
 /**
@@ -22,8 +21,6 @@ export class AgendamentoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
     
 
-  ngOnInit(){
-  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad AgendamentoPage');
   }

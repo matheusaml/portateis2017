@@ -1,5 +1,5 @@
-import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { LoginPage } from './../pages/login/login';
 import { CadastroPage } from './../pages/cadastro/cadastro';
 import { ExamePage } from './../pages/exame/exame';
