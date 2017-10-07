@@ -1,5 +1,6 @@
+import { CadastroPage } from './../cadastro/cadastro';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController, NavParams } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { Usuario } from '../../providers/auth/usuario';
 import { auth } from '../../providers/auth/auth';
@@ -22,11 +23,13 @@ export class LoginPage {
 
   user: Usuario = new Usuario();
   @ViewChild('form') form: NgForm;
+  CadastroPage = CadastroPage;
 
   constructor(
     public navCtrl: NavController,
     private toastCtrl: ToastController,
-    private authService: auth) {
+    private authService: auth,
+  public NavParams: NavParams) {
   }
 
   signIn() {
