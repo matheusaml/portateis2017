@@ -1,3 +1,5 @@
+import { CadastroPage } from './../pages/cadastro/cadastro';
+import { LoginPage } from './../pages/login/login';
 import { HomePage } from './../pages/home/home';
 import { ExamePage } from './../pages/exame/exame';
 import { MeudoutorPage } from './../pages/meudoutor/meudoutor';
@@ -16,7 +18,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //PAGINA INICIAL DO APLICATIVO
-  rootPage: any = HomePage;
+  rootPage: any = CadastroPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -30,6 +32,8 @@ export class MyApp {
       { title: 'Agendamento', component: AgendamentoPage},
       { title: 'Meu Doutor', component: MeudoutorPage},
       { title: 'Exames', component: ExamePage},
+      { title: 'Login', component: LoginPage},
+      { title: 'Cadastro', component: CadastroPage}
     ];
 
   }

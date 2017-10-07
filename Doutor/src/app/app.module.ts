@@ -1,3 +1,4 @@
+import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 import { LoginPage } from './../pages/login/login';
 import { CadastroPage } from './../pages/cadastro/cadastro';
@@ -19,16 +20,17 @@ import { AgendamentoPage } from './../pages/agendamento/agendamento';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
+import { auth } from '../providers/auth/auth';
 
 
-  var config = {
-    apiKey: "AIzaSyAd-AywTYhhSoC3IHzYP1w6R7bdks2-NZM",
-    authDomain: "drnahora-35138.firebaseapp.com",
-    databaseURL: "https://drnahora-35138.firebaseio.com",
-    projectId: "drnahora-35138",
-    storageBucket: "drnahora-35138.appspot.com",
-    messagingSenderId: "212488305388"
-  };
+var config = {
+  apiKey: "AIzaSyDI3XJc4gjWfBsBRSJr6s5jhTyLZd48InE",
+  authDomain: "doutor-a694d.firebaseapp.com",
+  databaseURL: "https://doutor-a694d.firebaseio.com",
+  projectId: "doutor-a694d",
+  storageBucket: "doutor-a694d.appspot.com",
+  messagingSenderId: "667638902248"
+};
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -54,6 +56,7 @@ const cloudSettings: CloudSettings = {
     IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(config)
   ],
   bootstrap: [IonicApp],
@@ -74,6 +77,8 @@ const cloudSettings: CloudSettings = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    auth,
+
   ]
 })
 export class AppModule {}
